@@ -1,0 +1,820 @@
+:root{
+    --herobg-height: 75vh;
+    --heroLefth2-size: 36px;
+}
+
+.cyan{
+    color: aqua;
+}
+
+.bullet{
+    font-weight: bolder;
+}
+
+.modal-exit{
+    width: 100%;
+    height: 100vh;
+    background: none;
+    position: fixed;
+    z-index: 1;
+}
+
+/* ==================================================================================================================================================
+    Hero SECTION MarkUp Begins here
+=============================================================================================================================================== */
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: calc(var(--herobg-height) + 10vh);
+    z-index: 4;
+}
+
+.hero-right,
+.hero-left{
+    color: white;
+}
+
+.hero-left{
+    padding: 35px;
+    margin-left: 80px;
+}
+
+.hero-left > h2{
+    font-size: var(--heroLefth2-size);
+    white-space: nowrap;
+    margin-top: 75px;
+    font-family: var(--afacad);
+}
+
+.h2A{
+    font-size: calc(var(--heroLefth2-size) + 15px);
+}
+
+.hero-left > p{
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 45px;
+    font-family: var(--advent-pro);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+
+img[alt='heroprofile']{
+    height: 350px;
+    margin-top: 40px;
+    margin-right: 120px;
+}
+
+.herobg_container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.herobg{
+    height: var(--herobg-height);
+    margin-top: 5px;
+    transition-delay: 10s;
+    width: 86%;
+    z-index: -3;
+}
+
+.hero:hover > .herobg_container > .herobg{
+    transform: scaleX(2);
+    transition: .5s;
+}
+
+.hero-modal{
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    height: 240px;
+    width: 220px;
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 20px;
+    z-index: 5;
+    margin-top: 110px;
+}
+
+.hero-modal > img{
+    width: 70px;
+    display: flex;
+    justify-self: center;
+}
+
+.hero-modal > p {
+    font-size: 14px;
+}
+
+.hero-modal > * > button{
+    width: 170px;
+    height: 35px;
+    font-size: 10px;
+}
+
+.hero-modal > * > button:nth-last-child(1){
+    margin-top: -32px;
+    border: none;
+    
+}
+
+/* ==================================================================================================================================================
+    This is the begining of LEARN MORE CONTAINER
+=============================================================================================================================================== */
+.learn_more_container{  
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    position: relative;
+    z-index: 1;
+    justify-content: space-around;
+    padding: 0;
+    min-height: 100vh;
+    gap: 0;
+    margin-top: -100px;
+    overflow: hidden;
+    font-family: var(--afacad);
+}
+
+.learn_more_container > *{
+    display: flex;
+}
+
+.learn_more_container > .left{
+    justify-content: left;
+    position: relative;
+    z-index: -1;
+    
+}
+
+.learn_more_container > .center{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    margin-top: -100px;
+}
+
+.learn_more_container > .center > article > h2{
+    font-size: 40px;
+    /* margin-bottom: -14px; */
+    font-weight: 600;
+}
+
+.learn_more_container > .center > article > p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.learn_more_container > .center > article > h2:nth-child(2){
+    margin-bottom: 20px;
+}   
+
+.learn_more_container > .center > article > *:not(button){
+    font-family: var(--afacad);
+}
+
+.learn_more_container > .right{
+    justify-content: right;    
+    margin-top: -60px; /*This margin is to make sure the right image container has same baseline as that of left*/
+}
+
+.learn_more_container img{
+    width: 300px;
+    position: absolute;
+}
+
+/* ==================================================================================================================================================
+    Why Choose Eduflex markup begins here
+=============================================================================================================================================== */
+
+.WhyEduflex{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    font-family: var(--afacad);
+    overflow: hidden;
+    position: relative;
+}
+
+.WhyEduflex > h2{
+    color: #565656;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.WhyEduflex > .outliner {
+    width: 70vw;
+    background-color: var(--primary-clr);
+    border-radius: 15px;
+    aspect-ratio: 30/20 ;
+    padding: 35px;
+    box-shadow: inset 5px 5px 7px 0.5px rgba(0, 0, 0, 0.581);
+
+    position: relative;
+}
+
+.WhyEduflex > .outliner > div {
+    aspect-ratio: 30/20;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.581);
+    overflow: hidden;
+    padding: 35px;
+    box-sizing: content-box;
+}
+
+.WhyEduflex > .outliner > div > div{
+    aspect-ratio: 30/20;
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+.WhyEduflex > .outliner > div > div > *{
+    white-space: nowrap;
+    background-color: var(--light-bg-cyan);
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    transition: .05s;
+}
+
+.WhyEduflex > .outliner > div > div > *:hover{
+    color: var(--primary-clr);
+}
+
+.WhyEduflex > .outliner > div > div > *:hover *{
+    fill: var(--primary-clr);
+}
+
+
+
+.WhyEduflex > .outliner > div > div > * > h2{
+    text-align: center;
+}
+
+.WhyEduflex > .outliner > div > div > * > ul, p.ul{
+    margin-top: -80px;
+    line-height: 30px;
+}
+
+.WhyEduflex > .outliner > div > div > *:nth-child(1){
+    margin-left: -50px;
+}
+
+
+.WhyEduflex > .outliner > div > div > *:nth-last-child(1){
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.WhyEduflex > .outliner > div > div > *:nth-last-child(1) p.ul{
+    text-align: center;
+    margin-top: 20;
+  
+}
+
+.whyeduflexicons > *{
+    fill: black;
+    transform: scale(0.7);
+    margin-bottom: -8px;
+    margin-left: -5px;
+}
+
+/* the below part for flare icon */
+
+img[alt="flare"]{
+    position: absolute;
+    min-width: 150px;
+}
+
+.flareIcon1{
+    top: 0;
+    width: 170px;
+    margin-left: -85px;
+}
+.flareIcon2{
+    top: 0;
+    right: 0;
+    margin-right: -70px;
+    width: 200px;
+}
+.flareIcon3{
+    bottom: 0;
+    right: 0;
+    margin-bottom: -30px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+/* THIS PART CONTAINS THE STYLING FOR HOW IT WORKS */
+/* THIS PART CONTAINS THE STYLING FOR HOW IT WORKS */
+/* THIS PART CONTAINS THE STYLING FOR HOW IT WORKS */
+/* THIS PART CONTAINS THE STYLING FOR HOW IT WORKS */
+
+.howitworks{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    position: relative;
+}
+
+.howItWorksHero > div > h1{
+    font-size: 50px;
+    margin-bottom: 70px;
+}
+
+.howitworks article{
+    position: relative;
+    font-size: 20px;
+    font-weight:100;    
+}
+
+.howitworks article > .numBullet{
+    font-size: 50px;
+    top: 0;
+    position: absolute;
+    font-weight: bold;
+    transform: translateY(-2px);
+    
+}
+
+.howitworks article > *:not(.numBullet){
+    margin-left: 45px;
+}
+
+.howItWorksHero article > .numBullet{
+    font-size: 30px;
+    margin-top: 2px;
+}
+
+.howItWorksHero article > h1{
+    font-size: 30px;
+}
+
+.howItWorksHero{
+    height: 370px;
+    border-radius: 20px;
+    background-color: var(--primary-clr);
+    padding: 7px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    overflow: hidden;
+    color: white;
+}
+
+img[alt='How it works Image']{
+    width: 400px;
+    margin-right: -55px;
+    margin-top: 20px;
+}
+.how_it_works_bullet{
+    color: var(--primary-clr);
+}
+
+.how_it_works_bullet article{
+    background-color: var(--light-bg-cyan);
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.how_it_works_bullet article > .numBullet{
+    transform: translateX(10px)
+}
+
+.how_it_works_bullet article>p{
+    text-align: center;
+    transform: translateX(-25px) ;
+    display: grid;
+    justify-self: center;
+    font-size: 16Spx;
+    margin-top: 20px;
+}
+
+.how_it_works_bullet{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 45px;
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.how_it_works_bullet > *{
+    aspect-ratio: 300/540px;
+}
+
+.lastBulletArticle{
+    grid-column: span 3;
+    display: grid;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.lastBulletArticle p{
+    width: 80%;
+    min-width: 245px;
+    max-width: 270px;
+    padding-bottom: 20px;
+}
+
+.lastBulletArticle > h1{
+    transform: translateX(-25px)
+}
+
+
+
+/* 
+=====================================================================
+=====================================================================
+THIS PART FOR ABOUT US STYLE
+=====================================================================
+=====================================================================
+*/
+
+.aboutUs{
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 0 80px;
+    gap: 160px;
+    overflow: hidden;
+
+}
+.aboutUsLeft{
+    position: relative;
+}
+
+.aboutUsLeft > .mainImg {
+    height: 75vh;
+}
+
+.aboutUsRight{
+    color: var(--primary-clr);
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.aboutUsRight > h1{
+    color: #565656;
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+
+.aboutUsRight > p:nth-child(3){
+    margin-top: 25px;
+}
+
+.abtflare1,
+.abtflare2,
+.abtflare3{
+    aspect-ratio: 3/4;
+    min-width: 50px;
+    background: url(../../assets/eduflex.gif);
+    background-size: cover;
+    border: rgba(0, 255, 255, 0.413) solid thin;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    box-shadow: 3px 1px 10px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.abtflare1{
+    transform: translateY(170px) translateX(-20px);
+    z-index: -1;
+}
+
+.abtflare2{
+    width: 70px;
+    transform: translateY(110px) translateX(170px);
+    z-index: -1;
+}
+
+.abtflare3{
+    width: 70px;
+    transform: translateY(340px) translateX(240px);
+    z-index: 10 ;
+
+}
+
+
+/* .abtflare1,
+.abtflare2,
+.abtflare3{
+    position: absolute;
+    aspect-ratio: 3/4;
+    background: url(../../assets/eduflex.gif);
+    min-width: 500px;
+    
+} */
+
+.faq{
+    text-align: left;
+    color: var(--primary-clr-l1);
+    display: grid;
+    justify-content: center;
+    margin-top: 70px;
+    padding-bottom: 60px;
+}
+
+.faq > .faqHeader{
+    text-align: center;
+}
+
+.faq > .faqHeader > h1{
+    font-size: 45px;
+} 
+
+.faq > *{
+    width: 80vw;
+    max-width: 660px;
+}
+
+.faqContainer{
+    width: 100%;
+    border-bottom: #5656566f thin solid;
+    padding-bottom: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    
+}
+
+.faqControl {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.faqControl > h3{
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.FAQContent{
+    color: black;
+    font-size: small;
+    transition: 1s;
+
+}
+.moreFAQ{
+    display: grid;
+    justify-content: right;
+    text-decoration: underline;
+}
+
+/* Footer Styling  */
+/* Footer Styling  */
+/* Footer Styling  */
+/* Footer Styling  */
+/* Footer Styling  */
+/* Footer Styling  */
+footer{
+    background-color: var(--primary-clr);
+    width: 100%;
+    padding: 50px 65px;
+    color: white;
+    font-weight: 500px;
+    padding-bottom: 0;
+}
+
+.eduflexby{
+    width: 125px;
+    margin-bottom: 15px;
+}
+
+.footerpart1{
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: white thin solid;
+}
+
+.footerpart1 > .rightfootercomponent > h1{
+    margin-left: -20px;
+    margin-bottom: 30px;
+}
+
+.footerpart1 > .rightfootercomponent > ul{
+    list-style-type: disc;
+    font-size: 14px;
+}
+
+.footerbottompart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-weight: 50;
+    font-size: 14px;
+}
+
+.socialICon{
+    aspect-ratio: 1/1 ;
+    width: 25px;
+}
+
+.footerSocialContainer{
+    display: flex;
+    gap: 5px;
+}
+
+.arrows{
+    width: 20px;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.backBtn{
+    font-family: var(--afacad);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.backBtn > svg{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.getStartedMainContainer{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: grid;
+    grid-template-columns: .65fr .4fr;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    animation: fade-in 1.5s ;
+}
+
+.formBg{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.formBgFilter{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px 25px 25px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .8s;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: var(--afacad);
+}
+
+.formBgFilter > article{
+    width: 300px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.formBgFilter:hover{
+    backdrop-filter: blur(2px);
+}
+
+.formBgFilter > article > img{
+    width: 270px;
+    margin-bottom: 10px;
+    justify-self: center;
+}
+
+.formcontainer{
+    width: 510px;
+    background: white;
+    height: 80vh;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    transform: translateX(-70px);
+    box-shadow: 0px 0px 20px 2px rgba(97, 96, 96, 0.15);
+    border-radius: 20px;
+}
+
+.getStartedMainContainer form{
+    padding: 35px 20px;
+    font-family: var(--afacad);
+}
+
+.getStartedMainContainer form > label{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.getStartedMainContainer form > p{
+    margin-bottom: 20px;
+    color: #565656;
+    font-size: large;
+}
+
+.getStartedMainContainer form > input{
+    width: 420px;
+    height: 35px;
+    max-width: 100%;
+    border: thin #888888 solid;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.getStartedMainContainer form > input:focus{
+    border-color: black;
+}
+
+.getStartedMainContainer form > input::placeholder{
+    color: #565656a5;
+    font-size: large;
+    font-family: var(--afacad);
+}
+
+.lastBtn{
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.lastBtn > button{
+    margin-top: 25px;
+    font-size: .6em;
+}
+
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

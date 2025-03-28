@@ -1,0 +1,10 @@
+.component-container{
+    width: 100vw;
+    max-width: 100vw;
+    /* overflow-x: hidden; */
+}
+
+.component-container > *{
+        width: 100%;
+        overflow-x: hidden;
+}

@@ -1,0 +1,63 @@
+.header {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    font-family: var(--poppins);
+    font-weight: 200;
+    font-family: 12px;
+    gap: 20px;
+    justify-content: space-between;    
+    padding: 13px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+.headerLogo{
+    width: 90px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.header ul > li {
+    position: relative;
+}
+
+.header ul > li:hover{
+    text-shadow: 0px 0px 1.5px black;
+    transition: .1s;
+}
+
+.header  ul > li > a{
+    color: black;
+}
+
+.header ul > li::after{
+    content: "";
+    cursor: pointer;
+    width: 60%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    bottom: 0;
+    justify-self: center;
+    background-color: black;
+    border-radius: 20px;
+    transform: scaleX(0);
+    margin-bottom: 4px;
+    transition-duration: .5s;
+}
+
+.header ul > li:hover::after{
+    transform: scaleX(1);
+}
