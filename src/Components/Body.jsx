@@ -4,9 +4,6 @@ import heroPic from '../assets/hero-girl.png'
 import heroBg from '../assets/heroBg.svg'
 import learnMoreRight from '../assets/learnMoreRight.png'
 import learnMoreLeft from '../assets/learnMoreLeft.png'
-import flare1 from '../assets/flare1.png'
-import flare2 from '../assets/flare2.png'
-import flare3 from '../assets/flare3.png'
 import howitworksimage from '../assets/howItWorksHeroung.png'
 import aboutUsImg from '../assets/abu.png'
 import { useState } from 'react'
@@ -55,13 +52,13 @@ const arrowup = <svg xmlns="http://www.w3.org/2000/svg" className='arrows' viewB
 <path d="M19.9137 15.9214L13.3937 9.40139C12.6237 8.63139 11.3637 8.63139 10.5937 9.40139L4.07373 15.9214" stroke="#063465" stroke-width="3.21154" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-const bullet = <span style={{fontWeight: "bolder"}} className='bullet'>•&nbsp;&nbsp;&nbsp;</span>
+const bullet = <span style={{fontWeight: "bolder"}} className='bullet'>•&nbsp;&nbsp;</span>
 
 export default function HomePage(){
     const navigate = useNavigate()
     
     return (
-        <section style={{fontFamily: "var(--afacad)", animation: 'fade-in 1s '}} className="component-container">
+        <section style={{fontFamily: "var(--afacad)", animation: 'fade-in 1s '}} className="component-container hompage-container">
             <HeroSection />
             {/* ====================================================================================
                 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -82,44 +79,41 @@ export default function HomePage(){
             </section>
 
             <section id='features' className='WhyEduflex' title='Why Eduflex'>
-                <h2>Why Choose Eduflex?</h2>
-                <div className='outliner'>
-                    <div>
-                        <div>
-                            <article>
-                                <h2>For Students <i className="whyeduflexicons">{student_icon}</i></h2>
-                                <ul>
-                                    <li>Easy enrollment and fee payments.</li>
-                                    <li>Virtual classrooms with live lectures.</li>
-                                    <li>Academic performance tracking.</li>
-                                </ul>
-                            </article>
-                            <article>
-                                <h2>For Administrator <i className="whyeduflexicons">{administrator_icon}</i></h2>
-                                <ul>
-                                    <li>Streamlined admission management.</li>
-                                    <li>Automated grading and course management.</li>
-                                    <li>Anti-cheating exam monitoring.</li>
-                                </ul>
-                            </article>
-                            <article>
-                                <h2>For Institution <i className='whyeduflexicons'>{institution_icon}</i></h2>
-                                <p className='ul'>
-                                    <li>Finance tracking and reporting.</li>
-                                    <li>Data analytics for decison-making.</li>
-                                    <li>Secure, GDPR-compliant user authentication.</li>
-                                </p>
-                               
-                            </article>
-                        </div>
-                    </div>
-                    <img src={flare1} alt="flare" className="flareIcon1" />
-                    <img src={flare2} alt="flare" className="flareIcon2" />
-                    <img src={flare3} alt="flare" className="flareIcon3" />
+                <div className='intro'>
+                    <h1>Why Choose Eduflex?</h1>
+                    <p>EduFlex is designed to simplify academic processes for institutions, students, and administrators—making education more accessible, efficient, and engaging.</p>
+                </div>
+                <div className='contents'>
+                    <article>
+                        <h2>For Students <i className="whyeduflexicons">{student_icon}</i></h2>
+                        <ul>
+                            <li>{bullet}Easy enrollment and fee payments.</li>
+                            <li>{bullet}Virtual classrooms with live lectures.</li>
+                            <li>{bullet}Academic performance tracking.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>For Administrator <i className="whyeduflexicons">{administrator_icon}</i></h2>
+                        <ul>
+                            <li>{bullet}Streamlined admission management.</li>
+                            <li>{bullet}Automated grading and course management.</li>
+                            <li>{bullet}Anti-cheating exam monitoring.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>For Institution <i className='whyeduflexicons'>{institution_icon}</i></h2>
+                        <ul>
+                            <li>{bullet}Finance tracking and reporting.</li>
+                            <li>{bullet}Data analytics for decison-making.</li>
+                            <li>{bullet}Secure, GDPR-compliant user authentication.</li>
+                        </ul>
+                    </article>
+
                 </div>
             </section>
             <section id='howitworks' className='howitworks'>
                 <div className='howItWorksHero'>
+                    <div className='stroker'></div>
                     <div>
                         <h1>How It Works</h1>
                         <article>

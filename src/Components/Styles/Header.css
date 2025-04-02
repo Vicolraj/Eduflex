@@ -1,16 +1,17 @@
 .header {
     align-items: center;
-    background-color: white;
+    background-color: var(--header-bg);
     display: flex;
     font-family: var(--poppins);
     font-weight: 200;
     font-family: 12px;
     gap: 20px;
     justify-content: space-between;    
-    padding: 13px 15px;
+    padding: 13px 60px;
     position: sticky;
     top: 0;
     z-index: 200;
+    border-bottom: 2px solid rgba(6, 52, 101, 0.36);
 }
 
 .headerLogo{

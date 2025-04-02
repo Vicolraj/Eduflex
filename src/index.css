@@ -4,11 +4,13 @@
 
 
 :root{
+    --header-bg: #E9F1FF;
+    --body-bg: #F0F5FF;
     --poppins: "Poppins";
     --primary-clr: #063465;
     --afacad: "Afacad";
     --advent-pro: "Advent Pro", sans-serif;
-    --light-bg-cyan: #EBF4FE;
+    --light-bg-cyan:#DEEEFF;
     --primary-clr-l1: #0A57A8;
 }   
 
